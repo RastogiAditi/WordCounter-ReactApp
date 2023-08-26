@@ -1,10 +1,10 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  // Link,
-  // Outlet,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+//   // Link,
+//   // Outlet,
+// } from "react-router-dom";
 import { useState } from 'react';
 import './App.css';
 import About from './components/About';
@@ -44,20 +44,24 @@ function App() {
   }
   return (
   
-    <BrowserRouter>
+  //   <BrowserRouter>
+  //   <div>
+      
+  //   <Navbar title="WordCounter" mode={mode} toggleMode={toggleMode}/>
+  //       <Alert alert={alert}/>
+  //       {/* <TextForm showAlert={showAlert} heading="Enter your text" mode={mode} /> */}
+  //   <Routes>
+  //   <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode} />}/>
+  //    <Route path="/about" element={<About />} />      
+      
+  //   </Routes>
+  //   </div>
+  // </BrowserRouter>
     <div>
-      
-    <Navbar title="WordCounter" mode={mode} toggleMode={toggleMode}/>
+       <Navbar title="WordCounter" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
-        {/* <TextForm showAlert={showAlert} heading="Enter your text" mode={mode} /> */}
-    <Routes>
-    <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode} />}/>
-     <Route path="/about" element={<About />} />      
-      
-    </Routes>
+      <TextForm showAlert={showAlert} heading="Enter your text" mode={mode} /> 
     </div>
-  </BrowserRouter>
-    
     
     
 
