@@ -11,6 +11,8 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
 //dark mode enbale fumction
@@ -61,9 +63,11 @@ function App() {
        <Navbar title="WordCounter" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
         <div>
-        <TextForm showAlert={showAlert} value="Enter your text" mode={mode} /> 
+          {/* <About mode={mode}/> */}
+        <TextForm showAlert={showAlert} heading="Enter your text" mode={mode} /> 
   
         </div>
+        <div><Footer/></div>
        </div>
     
     

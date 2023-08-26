@@ -16,7 +16,7 @@ function TextForm(props) {
     }
     else{
     setText(event.target.value);
-    const words = newText.trim().split(/\s+/);
+    const words = newText.trim().split(/\s+/).filter((element)=> {return element.length!==0});
       setWordCount(words.length);
     }
    
@@ -84,8 +84,8 @@ function TextForm(props) {
           id="myBox"
           rows="8"
           style={{
-            background: props.mode === "dark" ? "grey" : "white",
-            color: props.mode === "dark" ? "white" : "black",
+            backgroundColor: props.mode === "dark" ? " #B2BEB5" : "white",
+            color: props.mode === "dark" ? "black" : "blue",
           }}
         />
       </div>
@@ -94,17 +94,17 @@ function TextForm(props) {
         style={{ color: props.mode === "dark" ? "white" : "black" }}
         align="center"
       >
-        <button className="btn btn-primary mx-2" onClick={clickToUpperCase}>
+        <button className="btn btn-primary mx-2 my-2" onClick={clickToUpperCase}>
           Covert to UpperCase
         </button>
-        <button className="btn btn-primary mx-2" onClick={clickToLowerCase}>
+        <button className="btn btn-primary mx-2 my-2" onClick={clickToLowerCase}>
           Convert to LowerCase
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={clearText}>
+        <button className="btn btn-primary mx-2 my-2" onClick={clearText}>
           Clear
         </button>
-        <button className="btn btn-primary " onClick={copyText}>
+        <button className="btn btn-primary mx-2 my-2" onClick={copyText}>
           {" "}
           Copy
         </button>
@@ -121,7 +121,7 @@ function TextForm(props) {
       <div
         className="container"
         style={{
-          background: props.mode === "dark" ? "light" : "dark",
+          backgroundColor: props.mode === "dark" ? "light" : "dark",
           color: props.mode === "dark" ? "white" : "black",
         }}
       >
