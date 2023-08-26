@@ -10,7 +10,16 @@ function TextForm(props) {
   };
 
   const handleOnChange = (event) => {
+    const newText = event.target.value;
+    if(newText.length===null){
+      setWordCount(newText.length);
+    }
+    else{
     setText(event.target.value);
+    const words = newText.trim().split(/\s+/);
+      setWordCount(words.length);
+    }
+   
   };
 
   //  Lower Casing Method...............
@@ -57,7 +66,9 @@ function TextForm(props) {
     setText(text + "\n" + textCopy);
     props.showAlert("Text is pasted  ", "success");
   };
-  const [text, setText] = useState("Enter your here");
+  const [text, setText] = useState("Enter Your Text");
+  const [wordCount, setWordCount] = useState(3);
+ 
 
   return (
     <div
@@ -116,7 +127,7 @@ function TextForm(props) {
       >
         <h2>Text Summary</h2>
         <p>
-          {text.split(" ").length} Words and {text.length} Characters
+        {wordCount} Words and {text.length} Characters
         </p>
         <p>{0.008 * text.split(" ").length} Time Taken To Read </p>
         <p>{text.split(".").length-1} Sentences</p>
