@@ -116,7 +116,7 @@ function TextForm(props) {
       >
         <h2>Text Summary</h2>
         <p>
-          {text.split(" ").length-1} Words and {text.length} Characters
+          {text.split(" ").length} Words and {text.length} Characters
         </p>
         <p>{0.008 * text.split(" ").length} Time Taken To Read </p>
         <p>{text.split(".").length-1} Sentences</p>
