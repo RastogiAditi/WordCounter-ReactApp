@@ -64,7 +64,7 @@ function App() {
         <Alert alert={alert}/>
         <div>
           {/* <About mode={mode}/> */}
-        <TextForm showAlert={showAlert} heading="Enter your text" mode={mode} /> 
+        <TextForm showAlert={showAlert} heading="Word Counter : Word Count| Character Count | Time Count for Reading Word" mode={mode} /> 
   
         </div>
         <div><Footer/></div>
